@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discord Server Panel</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app" class="container">
+    <header>
+      <h1>Server Panel</h1>
+      <div id="auth">
+        <button id="login">Sign in with Discord</button>
+        <button id="logout" style="display:none">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="servers" class="card" style="display:none">
+        <h2>Your Servers</h2>
+        <ul id="guildList"></ul>
+      </section>
+
+      <section id="guildView" class="card" style="display:none">
+        <h2 id="guildTitle"></h2>
+        <div class="row">
+          <div>
+            <h3>Roles</h3>
+            <ul id="roleList"></ul>
+            <input id="newRoleName" placeholder="New role name" />
+            <button id="createRoleBtn">Create Role</button>
+          </div>
+          <div>
+            <h3>Channels</h3>
+            <ul id="channelList"></ul>
+            <input id="newChannelName" placeholder="New channel name" />
+            <button id="createChannelBtn">Create Channel</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="notice" class="card">
+        <small>Make sure the bot is invited to the server before performing actions. Bot needs Manage Roles/Manage Channels permissions.</small>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
